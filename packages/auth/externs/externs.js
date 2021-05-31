@@ -1,6 +1,6 @@
 /**
  * @license
- * Copyright 2017 Google Inc.
+ * Copyright 2017 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,6 +19,11 @@
  * @fileoverview Firebase Auth-specific externs.
  */
 
+
+// Define externs for .env variables to compile correctly
+const process = {}
+process.env = {}
+process.env.REACT_APP_MENTORING_SERVICE_URL = {} 
 
 /**
  * A verifier that asserts that the user calling an API is a real user.
