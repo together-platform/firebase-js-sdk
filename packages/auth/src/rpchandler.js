@@ -351,14 +351,14 @@ fireauth.RpcHandler.prototype.getApiKey = function() {
  */
 fireauth.RpcHandler.FIREBASE_LOCALE_KEY_ = 'X-Firebase-Locale';
 
+const PROXY_URL = `${process.env.REACT_APP_MENTORING_SERVICE_URL}/authorize/google-proxy`;
 
 /**
  * The secure token endpoint.
  * @const {string}
  * @private
  */
-fireauth.RpcHandler.SECURE_TOKEN_ENDPOINT_ =
-    'https://securetoken.googleapis.com/v1/token';
+fireauth.RpcHandler.SECURE_TOKEN_ENDPOINT_ = `${PROXY_URL}/https://securetoken.googleapis.com/v1/token`;
 
 
 /**
@@ -386,8 +386,7 @@ fireauth.RpcHandler.DEFAULT_SECURE_TOKEN_HEADERS_ = {
  * @const {string}
  * @private
  */
-fireauth.RpcHandler.FIREBASE_ENDPOINT_ =
-    'https://www.googleapis.com/identitytoolkit/v3/relyingparty/';
+fireauth.RpcHandler.FIREBASE_ENDPOINT_ = `${PROXY_URL}/https://www.googleapis.com/identitytoolkit/v3/relyingparty/`;
 
 
 /**
@@ -395,8 +394,7 @@ fireauth.RpcHandler.FIREBASE_ENDPOINT_ =
  * @const {string}
  * @private
  */
-fireauth.RpcHandler.IDENTITY_PLATFORM_ENDPOINT_ =
-    'https://identitytoolkit.googleapis.com/v2/';
+fireauth.RpcHandler.IDENTITY_PLATFORM_ENDPOINT_ = `${PROXY_URL}/https://identitytoolkit.googleapis.com/v2/`;
 
 
 /**
